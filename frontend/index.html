@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>imessage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <article id="auth-view">
+    <div class="left">
+      <div class="intro">
+        <h1>i-message</h1>
+        <p>Creating memories</p>
+      </div>
+    </div>
+    <div class="right">
+      <div class="signup" id="signup">
+        <div class="words">
+          <h1>Create an account</h1>
+          <p>Enter your personal data to create an account</p>
+        </div>
+        <form action="" method="post" id="signup-form">
+          <div class="details">
+            <span>
+              <label for="name">Username <span aria-label="required">*</span></label>
+              <input type="text" name="name" id="name" required placeholder="eg. Fidel" />
+            </span>
+            <span>
+              <label for="number">Phone number <span aria-label="required">*</span></label>
+              <input type="tel" name="number" id="number" required placeholder="eg. 0712345678" />
+            </span>
+            <span>
+              <label for="email">Email Address <span aria-label="required">*</span></label>
+              <input type="email" name="email" id="email" required placeholder="eg. johnfrancis@gmail.com" />
+            </span>
+            <span>
+              <label for="password">Password <span aria-label="required">*</span></label>
+              <input type="password" name="password" id="password" required placeholder="Enter your password" />
+            </span>
+          </div>
+          <button type="submit">Sign up</button> <br />
+        </form>
+        <p>Already have an account? <a href="" id="login-link">Login</a></p>
+      </div>
+      <div class="login" id="login">
+        <div class="words">
+          <h1>Login</h1>
+          <p>Enter your details to log in to your account</p>
+        </div>
+        <form action="" method="get" id="login-form">
+          <div class="login-details">
+            <span>
+              <label for="name">Username <span aria-label="required">*</span></label>
+              <input type="text" name="name" id="name" required placeholder="eg. Fidel" />
+            </span>
+            <span>
+              <label for="password">Password <span aria-label="required">*</span></label>
+              <input type="password" name="password" id="password" required placeholder="Enter your password" />
+            </span>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="" id="create-link">Sign up</a></p>
+      </div>
+    </div>
+  </article>
+  <article id="dashboard-view"></article>
+  <article id="profile-view">
+    <div class="account-update">
+      <div class="profile-words">
+        <h2>Account settings</h2>
+        <p>Edit your details</p>
+      </div>
+      <div">
+        <form action="" id="account-details">
+          <div class="profile-pic">
+            <span class="avatar-upload-container">
+              <span id="pic" class="avatar-preview"></span>
+
+              <div class="upload-actions">
+                <input type="file" id="dp" accept="image/*" name="dp" class="hidden-file-input" />
+                <label for="dp" class="btn btn-secondary">Choose Image</label>
+
+                <button type="button" class="btn btn-primary">Upload Image</button>
+              </div>
+            </span>
+            <span id="about">
+              <label for="bio" id="bio">Add your bio</label>
+              <textarea name="bio" id="bio" placeholder="Write something about yourself"></textarea>
+            </span>
+          </div>
+          <div class="word-details">
+            <span>
+              <label for="name" id="name">Username</label>
+              <input type="text" name="name" id="name" />
+            </span>
+            <span>
+              <label for="email" id="email">Email Address</label>
+              <input type="email" name="email" id="email" />
+            </span>
+            <span>
+              <label for="number" id="number">Phone Nsumber</label>
+              <input type="tel" name="number" id="number" />
+            </span>
+            <span>
+              <label for="birthday" id="birthday">Birthday</label>
+              <input type="date" name="birthday" id="birthday" />
+            </span>
+            <button type="submit">Update Information</button>
+          </div>
+        </form>
+    </div>
+    </div>
+  </article>
+  <script src="script.js"></script>
+</body>
+
+</html>
