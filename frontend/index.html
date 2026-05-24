@@ -25,8 +25,8 @@
         <form action="" method="post" id="signup-form">
           <div class="details">
             <span>
-              <label for="name">Username <span aria-label="required">*</span></label>
-              <input type="text" name="name" id="name" required placeholder="eg. Fidel" />
+              <label for="signup-name">Username <span aria-label="required">*</span></label>
+              <input type="text" name="signup-name" id="signup-name" required placeholder="eg. Fidel" />
             </span>
             <span>
               <label for="number">Phone number <span aria-label="required">*</span></label>
@@ -53,8 +53,8 @@
         <form action="" method="get" id="login-form">
           <div class="login-details">
             <span>
-              <label for="name">Username <span aria-label="required">*</span></label>
-              <input type="text" name="name" id="name" required placeholder="eg. Fidel" />
+              <label for="login-name">Username <span aria-label="required">*</span></label>
+              <input type="text" name="login-name" id="login-name" required placeholder="eg. Fidel" />
             </span>
             <span>
               <label for="password">Password <span aria-label="required">*</span></label>
@@ -67,14 +67,63 @@
       </div>
     </div>
   </article>
-  <article id="dashboard-view"></article>
-  <article id="profile-view">
+  <article id="dashboard-view" class="view-section hidden">
+    <div class="chat-container">
+      <aside class="chat-sidebar">
+        <div class="sidebar-header">
+          <h2>i-message</h2>
+        </div>
+        <ul class="user-list">
+          <li class="user-item active">
+            <span class="user-avatar"></span>
+            <div class="user-info">
+              <span class="user-name">Fidel</span>
+              <span class="user-status">Online</span>
+            </div>
+          </li>
+          <li class="user-item">
+            <span class="user-avatar"></span>
+            <div class="user-info">
+              <span class="user-name">Fred</span>
+              <span class="user-status">Offline</span>
+            </div>
+          </li>
+        </ul>
+        <button id="go-to-profile-btn" class="btn btn-secondary settings-btn">Settings</button>
+      </aside>
+
+      <main class="chat-window">
+        <div class="chat-header">
+          <span class="current-chat-avatar"></span>
+          <h3>Chat with Bob</h3>
+        </div>
+
+        <div class="message-history" id="chat-box">
+          <div class="message incoming">
+            <p>Hey there! Did you start the project?</p>
+            <span class="msg-time">14:02</span>
+          </div>
+          <div class="message outgoing">
+            <p>Yeah, I am styling the dashboard right now. Look at this dark mode layout!</p>
+            <span class="msg-time">14:05</span>
+          </div>
+        </div>
+
+        <form class="message-input-area" id="msg-form">
+          <textarea placeholder="Type a message..." id="msg-input" rows="1"></textarea>
+          <button type="submit" class="btn btn-primary send-btn">Send</button>
+        </form>
+      </main>
+
+    </div>
+  </article>
+  <article id="profile-view" class="view-section hidden">
     <div class="account-update">
       <div class="profile-words">
         <h2>Account settings</h2>
         <p>Edit your details</p>
       </div>
-      <div">
+      <div>
         <form action="" id="account-details">
           <div class="profile-pic">
             <span class="avatar-upload-container">
@@ -94,8 +143,8 @@
           </div>
           <div class="word-details">
             <span>
-              <label for="name" id="name">Username</label>
-              <input type="text" name="name" id="name" />
+              <label for="profile-name" id="name">Username</label>
+              <input type="text" name="profile-name" id="profile-name" />
             </span>
             <span>
               <label for="email" id="email">Email Address</label>
