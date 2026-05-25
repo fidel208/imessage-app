@@ -117,27 +117,60 @@
     <article id="dashboard-view" class="view-section hidden">
       <div class="chat-container">
         <aside class="chat-sidebar">
-          <div class="sidebar-header">
+          <div
+            class="sidebar-header"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
             <h2>i-message</h2>
+            <button
+              id="new-group-btn"
+              class="btn btn-primary"
+              style="padding: 4px 10px; font-size: 0.75rem"
+            >
+              + Group
+            </button>
           </div>
-          <ul class="user-list">
-            <li class="user-item active">
-              <span class="user-avatar"></span>
-              <div class="user-info">
-                <span class="user-name">Fidel</span>
-                <span class="user-status">Online</span>
-              </div>
-            </li>
-            <li class="user-item">
-              <span class="user-avatar"></span>
-              <div class="user-info">
-                <span class="user-name">Fred</span>
-                <span class="user-status">Offline</span>
-              </div>
-            </li>
-          </ul>
+
+          <div
+            class="chat-tabs"
+            style="display: flex; gap: 10px; margin-bottom: 15px"
+          >
+            <button
+              id="tab-direct"
+              class="btn btn-primary"
+              style="flex: 1; padding: 6px; font-size: 0.8rem"
+            >
+              Direct
+            </button>
+            <button
+              id="tab-groups"
+              class="btn btn-secondary"
+              style="flex: 1; padding: 6px; font-size: 0.8rem"
+            >
+              Groups
+            </button>
+          </div>
+
+          <ul class="user-list"></ul>
+
           <button id="go-to-profile-btn" class="btn btn-secondary settings-btn">
             Settings
+          </button>
+          <button
+            id="logout-btn"
+            class="btn btn-secondary logout-btn"
+            style="
+              margin-top: 10px;
+              background-color: #2b1313;
+              border-color: #543b3b;
+              color: #f4cdcd;
+            "
+          >
+            Logout
           </button>
         </aside>
 
@@ -162,6 +195,19 @@
           </div>
 
           <form class="message-input-area" id="msg-form">
+            <input
+              type="file"
+              id="chat-image-input"
+              accept="image/*"
+              style="display: none"
+            />
+            <label
+              for="chat-image-input"
+              class="btn btn-secondary"
+              style="padding: 10px 14px; font-size: 1.1rem; cursor: pointer"
+              >📷</label
+            >
+
             <textarea
               placeholder="Type a message..."
               id="msg-input"
